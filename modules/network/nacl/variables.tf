@@ -8,6 +8,11 @@ variable "create_nacl" {
   }
 }
 
+variable "name" {
+  type        = string
+  description = "nacl의 이름"
+}
+
 variable "nacl_id" {
   type        = string
   description = "NACL을 만들지 않고, 기존 ACL을 사용할 경우에 입력"

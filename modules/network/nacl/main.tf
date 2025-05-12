@@ -5,6 +5,9 @@ locals {
 resource "aws_network_acl" "default" {
   count  = var.create_nacl ? 1 : 0
   vpc_id = var.vpc_id
+  tags = {
+    Name = var.name
+  }
 }
 
 resource "aws_network_acl_association" "default" {

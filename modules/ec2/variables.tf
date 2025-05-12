@@ -19,5 +19,5 @@ variable "subnet_id" {
 variable "user_data_base64" {
   type        = string
   description = "user_data encoded to base64"
-  default     = ""
+  default     = "sudo yum update && sudo yum install -y nginx && sudo systemctl enable nginx.service && sudo systemctl start nginx.service"
 }

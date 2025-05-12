@@ -43,7 +43,7 @@ variable "associated_subnet_ids" {
 variable "aws_routes" {
   type = list(object({
     destination_cidr_block = string
-    gateway_id             = string
+    gateway_id             = optional(string)
   }))
   description = "로컬 라우트 룰"
 
